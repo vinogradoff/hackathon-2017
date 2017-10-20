@@ -14,7 +14,7 @@ public class Search {
         Configuration.browser = "chrome";
         open("https://www.amazon.com/");
 
-        new SearchPage().search(SearchPage.ProductType.CONSOLE, "PlayStation 4");
+        new SearchPage().search("PlayStation 4 camera");
         new ProductPage().addToCart();
 
 

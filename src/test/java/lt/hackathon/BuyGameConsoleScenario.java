@@ -21,7 +21,14 @@ public class BuyGameConsoleScenario {
     @Test
     public void search(){
         LoginStep.login();
-        new SearchPage().search(SearchPage.ProductType.CONSOLE, "Playstation 4");
+        new SearchPage().search("Playstation 4");
+        new ProductPage().addToCart();
+    }
+
+    @Test
+    public void searchCamera(){
+        LoginStep.login();
+        new SearchPage().search("Playstation 4 camera");
         new ProductPage().addToCart();
     }
 
