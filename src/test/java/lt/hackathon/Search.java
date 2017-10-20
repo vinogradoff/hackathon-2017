@@ -3,6 +3,7 @@ package lt.hackathon;
 import com.codeborne.selenide.Configuration;
 import lt.hackathon.pageobjects.ProductPage;
 import lt.hackathon.pageobjects.SearchPage;
+import lt.hackathon.pageobjects.SellersPage;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -15,9 +16,8 @@ public class Search {
         open("https://www.amazon.com/");
 
         new SearchPage().search("PlayStation 4 camera");
-        new ProductPage().addToCart();
-
-
+        new ProductPage().goToOtherSellers();
+        new SellersPage().findBestSeller();
 
         Thread.sleep(5000);
     }
