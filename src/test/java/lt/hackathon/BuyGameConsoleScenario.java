@@ -1,5 +1,6 @@
 package lt.hackathon;
 
+import com.sun.javafx.runtime.SystemProperties;
 import lt.hackathon.pageobjects.SignInPage;
 import lt.hackathon.pageobjects.SignInLinkArea;
 import org.junit.Test;
@@ -15,8 +16,11 @@ public class BuyGameConsoleScenario {
         open("/");
         SignInLinkArea signInLinkArea = new SignInLinkArea();
         signInLinkArea.openSignInPage();
-        new SignInPage().login("alexei+selenide@vinogradoff.de","We1234");
-        signInLinkArea.signIn.shouldHave(text("Hello, Selenide"));
+        String userEmail= System.getProperty("amazon.username"),
+                userPassword=System.getProperty("amazon.password"),
+                userFirstname=System.getProperty("amazon.firstname");
+        new SignInPage().login(userEmail,userPassword);
+        signInLinkArea.signIn.shouldHave(text("Hello, "+userFirstname));
     }
 
 
