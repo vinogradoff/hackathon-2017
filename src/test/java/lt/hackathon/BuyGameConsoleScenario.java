@@ -2,7 +2,7 @@ package lt.hackathon;
 
 import lt.hackathon.pageobjects.ProductPage;
 import lt.hackathon.pageobjects.SearchPage;
-import lt.hackathon.pageobjects.SignInLinkArea;
+import lt.hackathon.pageobjects.navigation_menu.SignInLinkArea;
 import lt.hackathon.steps.LoginStep;
 import org.junit.Test;
 

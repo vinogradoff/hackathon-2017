@@ -1,4 +1,4 @@
-package lt.hackathon.pageobjects;
+package lt.hackathon.pageobjects.navigation_menu;
 
 import com.codeborne.selenide.SelenideElement;
 

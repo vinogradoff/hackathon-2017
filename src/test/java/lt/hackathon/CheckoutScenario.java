@@ -1,8 +1,8 @@
 package lt.hackathon;
 
-import lt.hackathon.pageobjects.CartWidget;
-import lt.hackathon.pageobjects.ProceedToCheckoutWidget;
-import lt.hackathon.pageobjects.SelectShippingAddress;
+import lt.hackathon.pageobjects.checkout.SelectShippingAddress;
+import lt.hackathon.pageobjects.common.ProceedToCheckoutWidget;
+import lt.hackathon.pageobjects.navigation_menu.CartWidget;
 import lt.hackathon.steps.LoginStep;
 import org.junit.Test;
 

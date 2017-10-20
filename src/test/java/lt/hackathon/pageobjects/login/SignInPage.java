@@ -1,9 +1,8 @@
-package lt.hackathon.pageobjects;
+package lt.hackathon.pageobjects.login;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SignInPage {

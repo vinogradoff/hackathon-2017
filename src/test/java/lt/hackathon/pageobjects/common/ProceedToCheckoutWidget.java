@@ -1,4 +1,4 @@
-package lt.hackathon.pageobjects;
+package lt.hackathon.pageobjects.common;
 
 import com.codeborne.selenide.SelenideElement;
 

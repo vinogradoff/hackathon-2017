@@ -1,7 +1,7 @@
 package lt.hackathon.steps;
 
-import lt.hackathon.pageobjects.SignInLinkArea;
-import lt.hackathon.pageobjects.SignInPage;
+import lt.hackathon.pageobjects.login.SignInPage;
+import lt.hackathon.pageobjects.navigation_menu.SignInLinkArea;
 
 import static com.codeborne.selenide.Selenide.open;
 
