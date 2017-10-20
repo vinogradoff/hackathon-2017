@@ -1,5 +1,6 @@
 package lt.hackathon;
 
+import lt.hackathon.pageobjects.OrderWidget;
 import lt.hackathon.pageobjects.checkout.PaymentOptions;
 import lt.hackathon.pageobjects.checkout.SelectShippingAddress;
 import lt.hackathon.pageobjects.checkout.SelectShippingOptions;
@@ -7,6 +8,8 @@ import lt.hackathon.pageobjects.common.ProceedToCheckoutWidget;
 import lt.hackathon.pageobjects.navigation_menu.CartWidget;
 import lt.hackathon.steps.LoginStep;
 import org.junit.Test;
+
+import static com.codeborne.selenide.Condition.value;
 
 public class CheckoutScenario {
 
@@ -22,6 +25,8 @@ public class CheckoutScenario {
         // Select shipping address
         new SelectShippingAddress().deliverTo("Selenide Team");
         new SelectShippingOptions().chooseStandard();
-        new PaymentOptions().payWithCreditcard("Name","Number","12/17");
+        new PaymentOptions().payWithCreditcard("Victoria Gerald","4532987522825600","12/2017");
+        new OrderWidget().orderBtn.shouldHave(value("Place your order"));
+        // we do not actually order
     }
 }
