@@ -1,4 +1,4 @@
-package lt.hackathon.pageobjects;
+package lt.hackathon.pageobjects.common;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -19,7 +19,7 @@ public class SearchPage {
 
 
     public void search(String searchItem) {
-        searchField.sendKeys(searchItem);
+        searchField.setValue(searchItem);
         searchField.submit();
 
         if (shipToCheckbox.getValue().equals("false")) {

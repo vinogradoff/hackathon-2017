@@ -1,13 +1,13 @@
 package lt.hackathon;
 
-import lt.hackathon.pageobjects.OrderWidget;
+import lt.hackathon.pageobjects.checkout.OrderWidget;
 import lt.hackathon.steps.CheckoutSteps;
 import lt.hackathon.steps.LoginStep;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Condition.value;
 
-public class CheckoutScenario {
+public class CheckoutTest {
 
     @Test
     public void checkoutAndPay(){
