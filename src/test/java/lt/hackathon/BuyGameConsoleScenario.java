@@ -1,14 +1,11 @@
 package lt.hackathon;
 
-import com.sun.javafx.runtime.SystemProperties;
-import lt.hackathon.pageobjects.SignInPage;
+import lt.hackathon.pageobjects.SearchPage;
 import lt.hackathon.pageobjects.SignInLinkArea;
 import lt.hackathon.steps.LoginStep;
 import org.junit.Test;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Condition.text;
 
 public class BuyGameConsoleScenario {
 
@@ -19,4 +16,10 @@ public class BuyGameConsoleScenario {
         new SignInLinkArea().signIn.shouldHave(text("Hello, "+userFirstname));
     }
 
+
+    @Test
+    public void search(){
+        LoginStep.login();
+        new SearchPage().search("Playstation 4");
+    }
 }
