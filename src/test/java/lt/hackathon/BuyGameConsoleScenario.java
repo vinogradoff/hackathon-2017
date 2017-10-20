@@ -1,5 +1,6 @@
 package lt.hackathon;
 
+import lt.hackathon.pageobjects.ProductPage;
 import lt.hackathon.pageobjects.SearchPage;
 import lt.hackathon.pageobjects.SignInLinkArea;
 import lt.hackathon.steps.LoginStep;
@@ -20,6 +21,8 @@ public class BuyGameConsoleScenario {
     @Test
     public void search(){
         LoginStep.login();
-        new SearchPage().search("Playstation 4");
+        new SearchPage().search(SearchPage.ProductType.CONSOLE, "Playstation 4");
+        new ProductPage().addToCart();
     }
+
 }

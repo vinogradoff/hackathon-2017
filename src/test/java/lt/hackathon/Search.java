@@ -1,6 +1,7 @@
 package lt.hackathon;
 
 import com.codeborne.selenide.Configuration;
+import lt.hackathon.pageobjects.ProductPage;
 import lt.hackathon.pageobjects.SearchPage;
 import org.junit.Test;
 
@@ -13,9 +14,10 @@ public class Search {
         Configuration.browser = "chrome";
         open("https://www.amazon.com/");
 
-        SearchPage searchPage = new SearchPage();
+        new SearchPage().search(SearchPage.ProductType.CONSOLE, "PlayStation 4");
+        new ProductPage().addToCart();
 
-        searchPage.search("PlayStation 4");
+
 
         Thread.sleep(5000);
     }
