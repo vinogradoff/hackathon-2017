@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class SignInWidget {
+public class SignInLinkArea {
 
     public SelenideElement signIn=$("#nav-link-accountList");
 
