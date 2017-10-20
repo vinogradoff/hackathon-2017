@@ -1,6 +1,7 @@
 package lt.hackathon;
 
 import lt.hackathon.pageobjects.CartWidget;
+import lt.hackathon.pageobjects.ProceedToCheckoutWidget;
 import lt.hackathon.steps.LoginStep;
 import org.junit.Test;
 
@@ -16,6 +17,6 @@ public class CheckoutScenario {
         String itemsText=(itemsInCart==1)? ""+itemsInCart +" item": itemsInCart + " items";
         widget.cartWidget.shouldHave(attribute("aria-label",itemsText+" in cart"));
         widget.openShoppingCart();
-
+        new ProceedToCheckoutWidget().proceedToCheckout();
     }
 }
